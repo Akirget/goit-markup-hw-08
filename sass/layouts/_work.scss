@@ -1,13 +1,21 @@
 /* Чем занимается компания */
 
 .work {
-    @extend %section;
     padding-top: 0;
 }
 
 .work__container {
     @extend %container;
     
+
+    @include mq(mob-only) {
+            width: 480px;
+    display: none;
+        }
+    
+        @include mq(tab-only) {
+          display: none;
+        }
         }
 
 

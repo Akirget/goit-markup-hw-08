@@ -50,7 +50,7 @@
   text-decoration: none;
 }
 
-.portfolio, .client, .team, .work, .features, .hero {
+.portfolio, .client, .team, .features, .hero {
   padding: 94px 0;
 }
 
@@ -657,6 +657,18 @@ address {
 /* Чем занимается компания */
 .work {
   padding-top: 0;
+}
+
+@media screen and (max-width: 767.98px) {
+  .work__container {
+    width: 480px;
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .work__container {
+    display: none;
+  }
 }
 
 .work__title {
