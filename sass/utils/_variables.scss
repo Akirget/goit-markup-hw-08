@@ -1,0 +1,39 @@
+/* Стили для index.html */
+
+/* Цвета текста */
+
+/* Цвет основного текста #757575 */
+
+/* Цвет вторичного текста #212121 */
+
+/* Акцент #2196F3 */
+
+/* Белый цвет #FFFFFF */
+
+/* Почта, телефон футера rgba(255, 255, 255, 0.6) */
+
+/* Цвета фона */
+
+/* Цвет шапки #FFFFFF */
+
+/* Цвет основной части и подвала #2F303A */
+
+/* Цвет преимущест компании #E5E5E5 */
+
+/* Цвет команды #F5F4FA */
+
+/* Цвет иконок #AFB1B8 */
+
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --accent-color: #2196f3;
+    --white-color: #ffffff;
+    --hero-color-background: #2f303a;
+    --black-color: #000000;
+    --team-color-background: #f5f4fa;
+    --footer-color-background: #2f303a;
+    --footer-color-mail: rgba(255, 255, 255, 0.6);
+    --icon-color: #afb1b8;
+    --anim-slow: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

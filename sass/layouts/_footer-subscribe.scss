@@ -1,0 +1,52 @@
+/* Раздел подписка */
+
+.footer__subscribe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 570px;
+    min-height: 86px;
+    margin-left: 93px;
+}
+
+.footer__subscribe-text {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    text-transform: uppercase;
+    color: var(--white-color);
+}
+
+.footer__subscribe-form {
+    display: flex;
+}
+
+.footer__subscribe-input {
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+
+    color: var(--footer-color-mail);
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    font-size: 16px;
+    line-height: calc(20 / 16);
+
+    &:focus {
+    outline: transparent;
+    }
+}
+
+
+.footer__subscribe-button {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    gap: 10px;
+    margin-left: 12px;
+}

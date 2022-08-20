@@ -1,0 +1,54 @@
+/* Социальные сети */
+
+.socials {
+    @extend %list;
+    display: flex;
+    align-items: center;
+}
+
+.socials__team {
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.socials__item {
+    width: 44px;
+    height: 44px;
+}
+
+.socials__footer {
+    justify-content: space-between;
+}
+
+.socials__link {
+    @extend %link;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    transition: fill var(--anim-slow), background-color var(--anim-slow);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--white-color);
+        }
+}
+
+.socials__link--team {
+    fill: var(--icon-color);
+}
+
+.socials__link--footer {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.socials__icon--footer {
+    fill: var(--white-color);
+}
