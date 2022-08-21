@@ -1,91 +1,84 @@
 /* Регистрация сайта */
 
 .contact {
-    @extend %list;
-    display: flex;
-    margin-left: auto;
+  @extend %list;
+  display: flex;
+  margin-left: auto;
 
-    @include mq(mob-only) {
-            display: none;
-    
-        }
-                @include mq(tab) {
-                flex-direction: column;
-                            }
+  @include mq(mob-only) {
+    display: none;
+  }
+  @include mq(tab) {
+    flex-direction: column;
+  }
 
-                    @include mq(desk) {
-                    flex-direction: row;
-                    }
+  @include mq(desk) {
+    flex-direction: row;
+  }
 }
 
 .contact__item {
-    position: relative;
-
+  position: relative;
 }
 
-.contact__item+.contact__item {
-    margin-left: 50px;
-    @include mq(tab) {
-            margin-left: 0;
-            margin-top: 10px;
-}
+.contact__item + .contact__item {
+  margin-left: 50px;
+  @include mq(tab) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
 
- @include mq(desk) {
+  @include mq(desk) {
     margin: 0;
     margin-left: 50px;
- }
+  }
 }
 
 .contact__link {
-    @extend %link;
-    display: inline-block;
-    padding: 32px 0;
-    align-items: center;
+  @extend %link;
+  display: inline-block;
+  padding: 32px 0;
+  align-items: center;
 
-    color: var(--primary-text-color);
+  color: var(--primary-text-color);
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 
-    position: relative;
+  position: relative;
 
-    transition: color var(--anim-slow);
+  transition: color var(--anim-slow);
 
-    &:hover,
-    &:focus {
-        color: var(--accent-color);
-        }
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 
-
-@include mq(tab) {
+  @include mq(tab) {
     padding: 0;
     display: flex;
     flex-wrap: nowrap;
-    
-        font-weight: 500;
-        font-size: 12px;
-        line-height: calc(14 / 12);
 
+    font-weight: 500;
+    font-size: 12px;
+    line-height: calc(14 / 12);
 
-        @include mq(desk) {
-                    padding: 32px 0;
-                    font-size: 14px;
-                    line-height: 1.14;
+    @include mq(desk) {
+      padding: 32px 0;
+      font-size: 14px;
+      line-height: 1.14;
 
-                    align-items: center;
-                    
-        }
-}
+      align-items: center;
+    }
+  }
 
-
-.contact__icon {
+  .contact__icon {
     margin-right: 10px;
     fill: currentColor;
     @include mq(tab) {
-           margin-right: 8px;
-        }
-}
-
+      margin-right: 8px;
+    }
+  }
 }

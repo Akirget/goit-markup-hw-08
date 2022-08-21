@@ -1,41 +1,37 @@
 /* Кнопка */
 
 .button {
-    min-width: 200px;
-    height: 50px;
-    
-    border-radius: 4px;
-    border: 1px solid transparent;
+  min-width: 200px;
+  height: 50px;
 
+  border-radius: 4px;
+  border: 1px solid transparent;
+
+  color: var(--white-color);
+  background-color: var(--accent-color);
+  border-color: transparent;
+
+  font-family: Roboto;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(30 / 16);
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+
+  transition: color var(--anim-slow), background-color var(--anim-slow);
+
+  &:hover,
+  &:hover {
     color: var(--white-color);
-    background-color: var(--accent-color);
-    border-color: transparent;
-
-    font-family: Roboto;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
-
-    transition: color var(--anim-slow), background-color var(--anim-slow);
-
-    &:hover,
-    &:hover {
-        color: var(--white-color);
-        background-color: #188ce8;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
-        }
-
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  }
 }
-
-
 
 .hero__button {
-    display: inline-block;
-    padding: 10px 32px;
+  display: inline-block;
+  padding: 10px 32px;
 }
-

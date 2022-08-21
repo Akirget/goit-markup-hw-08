@@ -1,68 +1,65 @@
 /* Почта и телефон компании */
 
 .footer__mail {
-    @extend %link;
-    color: var(--footer-color-mail);
+  @extend %link;
+  color: var(--footer-color-mail);
 
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 
-    transition: color var(--anim-slow);
-    &:hover,
-    &:focus {
+  transition: color var(--anim-slow);
+  &:hover,
+  &:focus {
     color: var(--accent-color);
+  }
 }
-}
-
-
 
 .footer__social {
-    
+  min-height: 80px;
+
+  @include mq(desk) {
     margin-left: 70px;
     width: 206px;
     min-height: 80px;
+  }
 }
 
 .footer__social-text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
 
-    text-transform: uppercase;
-    color: var(--white-color);
+  text-transform: uppercase;
+  color: var(--white-color);
 }
 
 .footer__social-list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer__social-link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
 
-    transition: background-color var(--anim-slow);
+  transition: background-color var(--anim-slow);
 
-
-    &:hover,
-    &:focus {
-            background-color: var(--accent-color);
-        }
-
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
-
-
 .footer__social-icon {
-    fill: var(--white-color);
+  fill: var(--white-color);
 }

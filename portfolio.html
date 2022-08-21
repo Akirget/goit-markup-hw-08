@@ -20,20 +20,27 @@
 
   <body class="body">
     <!-- Шапка сайта -->
-    <header class="header">
-      <div class="header__container">
+    <header class="header section">
+      <div class="header__container container">
+        <a class="logo logo__accent link" href="./index.html"
+          >Web<span class="logo__black">Studio</span></a
+        >
+        <button
+          class="mobile-button js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg width="24" height="16">
+            <use href="./img/icons.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
         <nav class="nav">
-          <a class="logo logo__accent link" href="./index.html"
-            >Web<span class="logo__black">Studio</span></a
-          >
           <ul class="nav__list list">
             <li class="nav__item">
               <a class="nav__link link" href="./index.html">Студія</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link nav__link--current link link" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="nav__link nav__link--current link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="nav__item">
               <a class="nav__link link" href="">Контакти</a>
@@ -64,12 +71,12 @@
     <!-- Основная часть сайта portfolio -->
     <main>
       <!-- Кнопки портфолио -->
-      <section class="portfolio section">
+      <section class="portfolio section container">
         <div class="portfolio__container">
           <h1 class="visually-hidden">Приклади робіт</h1>
           <ul class="filter list">
             <li class="filter__list">
-              <button class="filter__button filter__button--aktiv" type="button">Все</button>
+              <button class="filter__button filter__button--aktiv" type="button">Усі</button>
             </li>
             <li class="filter__list">
               <button class="filter__button" type="button">Веб-сайти</button>
@@ -92,7 +99,7 @@
                   <img
                     src="./img/img8.jpg"
                     alt="Відкритий ноутбук з сайтом Технокряк"
-                    width="370"
+                    width="354"
                   />
                   <div class="works__overlay">
                     <p class="works__overlay-text">
@@ -111,7 +118,7 @@
             <li class="portfolio__works-item">
               <a class="portfolio__works-link" href="">
                 <div class="works">
-                  <img src="./img/img9.jpg" alt="Хлопці грають у баскетбол" width="370" />
+                  <img src="./img/img9.jpg" alt="Хлопці грають у баскетбол" width="354" />
                   <div class="works__overlay">
                     <p class="works__overlay-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -130,7 +137,7 @@
             <li class="portfolio__works-item">
               <a class="portfolio__works-link" href="">
                 <div class="works">
-                  <img src="./img/img10.jpg" alt="Логотип ресторана Seafood" width="370" />
+                  <img src="./img/img10.jpg" alt="Логотип ресторана Seafood" width="354" />
                   <div class="works__overlay">
                     <p class="works__overlay-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -149,7 +156,7 @@
             <li class="portfolio__works-item">
               <a class="portfolio__works-link" href="">
                 <div class="works">
-                  <img src="./img/img11.jpg" alt="Навушники" width="370" />
+                  <img src="./img/img11.jpg" alt="Навушники" width="354" />
                   <div class="works__overlay">
                     <p class="works__overlay-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -168,7 +175,7 @@
             <li class="portfolio__works-item">
               <a class="portfolio__works-link" href="">
                 <div class="works">
-                  <img src="./img/img12.jpg" alt="Дві коробки" width="370" />
+                  <img src="./img/img12.jpg" alt="Дві коробки" width="354" />
                   <div class="works__overlay">
                     <p class="works__overlay-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -267,7 +274,7 @@
     </main>
     <!-- Подвал сайта -->
     <footer class="footer">
-      <div class="footer__container">
+      <div class="footer__container container">
         <div class="footer__flex">
           <div class="footer__contack--flex">
             <a href="./index.html" class="logo logo__accent link"
@@ -375,5 +382,61 @@
         </div>
       </div>
     </footer>
+
+    <!-- Мобильное меню -->
+
+    <div class="backdrop js-menu-container">
+      <div class="mobile-menu">
+        <button class="mobile-button-close js-close-menu" type="button">
+          <svg width="19" height="19">
+            <use href="./img/icons.svg#icon-close-mobile-menu"></use>
+          </svg>
+        </button>
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link mobile-menu__link--current" href="./index.html">Студія</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="./portfolio.html">Портфоліо</a>
+          </li>
+          <li class="mobile-menu__item"><a class="mobile-menu__link" href="">Контакти</a></li>
+        </ul>
+        <ul class="mobile-contact__list">
+          <li class="mobile-contact__item">
+            <a class="mobile-contack__link mobile-contack__link--current" href="tel:+380961111111"
+              >+38 096 111 11 11
+            </a>
+          </li>
+          <li class="mobile-contack__item">
+            <a class="mobile-contack__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+          </li>
+        </ul>
+        <ul class="mobile-media__list">
+          <li class="mobile-media__item">
+            <a class="mobile-media__link--current" href="">Instagram</a>
+          </li>
+          <li class="mobile-media__item">
+            <a class="mobile-media__link--current" href="">Twitter</a>
+          </li>
+          <li class="mobile-media__item">
+            <a class="mobile-media__link--current" href="">Facebook</a>
+          </li>
+          <li class="mobile-media__item">
+            <a class="mobile-media__link--current" href="">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

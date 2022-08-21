@@ -1,38 +1,54 @@
 /* Футер */
 
 .footer {
-    padding-bottom: 60px;
-    padding-top: 60px;
-
-    background-color: var(--footer-color-background);
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--footer-color-background);
 }
 
-.footer__container {
-    @extend %container;
+.footer__contack--flex {
+  @include mq(tab) {
+    width: 236px;
+  }
 }
 
 .footer__flex {
+  @include mq(tab-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    column-gap: 165px;
+    row-gap: 60px;
+  }
+  @include mq(desk) {
     display: flex;
     align-items: baseline;
+  }
 }
 
 .footer__list {
-    @extend %list;
+  @extend %list;
+  margin-bottom: 60px;
+  @include mq(desk) {
+    margin-bottom: 0;
+  }
 }
 
 .footer__contact {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .footer__address {
-    @extend %link;
-    color: var(--white-color);
+  @extend %link;
+  color: var(--white-color);
 
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
 .footer__item:not(:last-child) {
-    margin-bottom: 9px;
+  margin-bottom: 8px;
 }
