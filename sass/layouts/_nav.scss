@@ -9,6 +9,22 @@
     @extend %list;
     display: flex;
     margin-left: 93px;
+
+    @include mq(mob-only) {
+            display: none;
+    
+        }
+    
+    @include mq(tab) {
+    margin-left: 87px;
+    margin-right: 96px;}
+
+        @include mq(desk) {
+        margin-right: 0;
+        margin-left: 93px;
+         }
+    
+
 }
 
 .nav__item {
@@ -30,11 +46,14 @@
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    
 
     &:hover,
     &:focus {
         color: var(--accent-color);
         }
+
+        
 
 }
 

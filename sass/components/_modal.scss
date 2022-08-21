@@ -10,7 +10,8 @@
     background: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden {
+.backdrop.is-hidden,
+.backdrop:not(.is-open) {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;

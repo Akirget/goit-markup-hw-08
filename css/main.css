@@ -50,10 +50,6 @@
   text-decoration: none;
 }
 
-.portfolio, .client, .team, .features, .hero {
-  padding: 94px 0;
-}
-
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -133,12 +129,36 @@ address {
   }
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding: 94px 0;
+  }
+}
+
 /* Логотип компании */
 .logo {
   font-family: "Raleway";
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.19;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  letter-spacing: 0.03em;
+}
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .logo__accent {
@@ -429,7 +449,8 @@ address {
   background: rgba(0, 0, 0, 0.2);
 }
 
-.backdrop.is-hidden {
+.backdrop.is-hidden,
+.backdrop:not(.is-open) {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -466,6 +487,136 @@ address {
   border-radius: 50%;
 }
 
+.mobile-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  border: none;
+  background-color: var(--white-color);
+}
+@media screen and (min-width: 768px) {
+  .mobile-button {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-button {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 48px 40px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-color);
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform var(--anim-fast) 100ms;
+  transition: -webkit-transform var(--anim-fast) 100ms;
+  transition: transform var(--anim-fast) 100ms;
+  transition: transform var(--anim-fast) 100ms, -webkit-transform var(--anim-fast) 100ms;
+}
+
+.mobile-button-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--black-color);
+}
+.mobile-menu__link:hover, .mobile-menu__link:focus {
+  color: var(--accent-color);
+}
+
+.mobile-menu__link--current {
+  color: var(--accent-color);
+}
+
+.mobile-contact__list {
+  margin-top: auto;
+}
+
+.mobile-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contack__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.1666666667;
+  letter-spacing: 0.02em;
+}
+
+.mobile-contack__link--current {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.1764705882;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+}
+
+.mobile-media__list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 64px;
+}
+
+.mobile-media__item {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.2222222222;
+  letter-spacing: 0.02em;
+}
+
+.mobile-media__item + .mobile-media__item {
+  padding-left: 10px;
+  border-left: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-media__link--current {
+  color: var(--accent-color);
+}
+
 /* Шапка сайта (header) */
 .header {
   border-bottom: 1px solid #ececec;
@@ -495,6 +646,23 @@ address {
   display: -ms-flexbox;
   display: flex;
   margin-left: 93px;
+}
+@media screen and (max-width: 767.98px) {
+  .nav__list {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .nav__list {
+    margin-left: 87px;
+    margin-right: 96px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .nav__list {
+    margin-right: 0;
+    margin-left: 93px;
+  }
 }
 
 .nav__item {
@@ -540,6 +708,27 @@ address {
   display: flex;
   margin-left: auto;
 }
+@media screen and (max-width: 767.98px) {
+  .contact {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .contact__item {
   position: relative;
@@ -548,11 +737,21 @@ address {
 .contact__item + .contact__item {
   margin-left: 50px;
 }
+@media screen and (min-width: 768px) {
+  .contact__item + .contact__item {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contact__item + .contact__item {
+    margin: 0;
+    margin-left: 50px;
+  }
+}
 
 .contact__link {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: inline-block;
   padding: 32px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -569,10 +768,37 @@ address {
 .contact__link:hover, .contact__link:focus {
   color: var(--accent-color);
 }
-
-.contact__icon {
+@media screen and (min-width: 768px) {
+  .contact__link {
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.1666666667;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .contact__link {
+    padding: 32px 0;
+    font-size: 14px;
+    line-height: 1.14;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.contact__link .contact__icon {
   margin-right: 10px;
   fill: currentColor;
+}
+@media screen and (min-width: 768px) {
+  .contact__link .contact__icon {
+    margin-right: 8px;
+  }
 }
 
 /* Главный герой */
@@ -617,20 +843,55 @@ address {
   display: -ms-flexbox;
   display: flex;
 }
+@media screen and (max-width: 767.98px) {
+  .features__list {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .features__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 
-.features__item {
-  width: 270px;
+@media screen and (max-width: 767.98px) {
+  .features__item {
+    max-width: 450px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .features__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features__item {
+    width: 270px;
+  }
 }
 
 .features__item + .features__item {
   margin-left: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .features__item + .features__item {
+    margin-left: 0;
+  }
 }
 
 .features__icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 270px;
   height: 120px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -641,6 +902,11 @@ address {
   margin-bottom: 30px;
   background-color: var(--team-color-background);
 }
+@media screen and (max-width: 767.98px) {
+  .features__icon {
+    max-width: 450px;
+  }
+}
 
 .features__title {
   margin-bottom: 10px;
@@ -648,6 +914,11 @@ address {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+}
+@media screen and (max-width: 767.98px) {
+  .features__title {
+    text-align: center;
+  }
 }
 
 .features__description {
@@ -728,14 +999,23 @@ address {
   line-height: 1.17;
   text-align: center;
 }
+@media screen and (max-width: 767.98px) {
+  .team__title {
+    font-size: 28px;
+    line-height: 1.1785714286;
+    margin-bottom: 30px;
+  }
+}
 
-.team__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  gap: 30px;
+@media screen and (min-width: 768px) {
+  .team__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
 }
 
 .team__item {
@@ -745,6 +1025,18 @@ address {
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white-color);
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .team__item {
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .team__item + .team__item {
+    margin-top: 30px;
+  }
 }
 
 .team__workers {
@@ -782,36 +1074,34 @@ address {
 
 /* Клиенты */
 .client__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.17;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.1785714286;
   text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .client__item {
-  width: 170px;
-  height: 90px;
+  width: calc((100% - 30px) / 2);
 }
-.client__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 768px) {
+  .client__item {
+    width: calc((100% - 60px) / 3);
+  }
 }
 
 .client__link {
-  width: 170px;
-  height: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -821,6 +1111,8 @@ address {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
   fill: var(--icon-color);

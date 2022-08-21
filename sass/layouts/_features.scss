@@ -1,7 +1,7 @@
 /* Преимущества компании */
 
 .features {
-    @extend %section;
+    
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -13,24 +13,57 @@
 .features__list {
     @extend %list;
     display: flex;
+
+    @include mq(mob-only) {
+            display: block;
+    
+        }
+                @include mq(tab-only) {
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+                        @include mq(desk) {
+                            display: flex;
+                        }
+
 }
 
 .features__item {
-    width: 270px;
+    @include mq(mob-only) {
+            max-width: 450px;
+        }
+
+            @include mq(tab-only) {
+                width: calc((100% - 30px)/2);
+            }
+
+                @include mq(desk) {
+                    width: 270px;
+                    }
 }
 
 .features__item+.features__item {
     margin-left: 30px;
+
+    @include mq(tab-only) {
+            margin-left: 0;
+    
+        }
 }
 
 .features__icon {
     display: flex;
-    width: 270px;
+    
     height: 120px;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
     background-color: var(--team-color-background);
+
+    @include mq(mob-only) {
+            max-width: 450px;
+    
+        }
 }
 
 .features__title {
@@ -41,6 +74,13 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
+
+    @include mq(mob-only) {
+            text-align: center;
+    
+        }
+
+            
 }
 
 .features__description {

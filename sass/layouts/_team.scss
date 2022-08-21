@@ -1,7 +1,7 @@
 /* Команда компании */
 
 .team {
-    @extend %section;
+    
     background-color: var(--team-color-background);
 }
 
@@ -17,14 +17,23 @@
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
+
+    @include mq(mob-only) {
+            font-size: 28px;
+            line-height: calc(33 / 28);
+            margin-bottom: 30px;
+}
 }
 
 .team__list {
     @extend %list;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-}
+        @include mq(tab) {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        }
+
+    }
 
 .team__item {
     flex-basis: calc((100% - 30px * 3) / 4);
@@ -34,6 +43,20 @@
     border-radius: 0px 0px 4px 4px;
 
     background-color: var(--white-color);
+
+@include mq(tab-only) {
+    flex-basis: calc((100% - 30px)/2);
+}
+@include mq(desc) {
+    flex-basis: calc((100% - 90px)/4);
+}
+}
+
+.team__item + .team__item {
+
+    @include mq(mob-only){
+        margin-top: 30px;
+}
 }
 
 .team__workers {
