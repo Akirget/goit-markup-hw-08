@@ -477,7 +477,6 @@ address {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 528px;
   min-height: 581px;
   background-color: var(--white-color);
 }
@@ -857,10 +856,10 @@ address {
 }
 /* Главный герой */
 .hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
-  max-width: 1600px;
-  min-height: 600px;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  padding-right: 0;
+  padding-left: 0;
   margin-right: auto;
   margin-left: auto;
   background-repeat: no-repeat;
@@ -873,17 +872,17 @@ address {
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero@2x_mob.png);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x_mob.png);
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero@2x_mob.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x_mob.jpg);
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767.98px) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero@1x_tab.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@1x_tab.jpg);
   }
 }
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2), screen and (min-width: 480px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 480px) and (min-resolution: 192dpi), screen and (min-width: 480px) and (min-resolution: 2dppx) {
+@media screen and (max-width: 767.98px) and (min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 767.98px) and (min-resolution: 192dpi), screen and (max-width: 767.98px) and (min-resolution: 2dppx) {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero@2x_tab.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x_tab.jpg);
@@ -893,6 +892,8 @@ address {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../img/hero/hero@1x_desk.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@1x_desk.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
@@ -901,24 +902,37 @@ address {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../img/hero/hero@2x_desk.jpg);
   }
 }
-.hero .hero__title {
+
+.hero__title {
   margin-bottom: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 696px;
-  color: var(--white-color);
+  padding-left: 0px;
+  padding-right: 0px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.6153846154;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  color: var(--white-color);
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /* Преимущества компании */
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .features__list {
@@ -1266,6 +1280,11 @@ address {
     margin-bottom: 0;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__list {
+    margin-bottom: 0;
+  }
+}
 
 .footer__contact {
   margin-top: 20px;
@@ -1365,6 +1384,13 @@ address {
 }
 @media screen and (min-width: 1200px) {
   .footer__subscribe {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -ms-flex-pack: distribute;
         justify-content: space-around;
     width: 570px;
@@ -1394,6 +1420,14 @@ address {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 
 .footer__subscribe-input {
   width: 100%;
@@ -1415,6 +1449,13 @@ address {
 @media screen and (min-width: 768px) {
   .footer__subscribe-input {
     width: 450px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__subscribe-input {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 
@@ -1518,11 +1559,7 @@ address {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
-  .portfolio__works {
-    gap: 30px;
-  }
+  gap: 30px;
 }
 
 .portfolio__works-item {
@@ -1561,19 +1598,25 @@ address {
 @media screen and (min-width: 1200px) {
   .portfolio__works-item {
     max-width: 370px;
-    margin-right: 30px;
     margin-bottom: 30px;
   }
 }
 
 .portfolio__works-link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-transition: background-color var(--anim-slow);
   transition: background-color var(--anim-slow);
   -webkit-transition: border var(--anim-slow), -webkit-box-shadow var(--anim-slow);
   transition: border var(--anim-slow), -webkit-box-shadow var(--anim-slow);
   transition: border var(--anim-slow), box-shadow var(--anim-slow);
   transition: border var(--anim-slow), box-shadow var(--anim-slow), -webkit-box-shadow var(--anim-slow);
+  height: 100%;
 }
 .portfolio__works-link:hover, .portfolio__works-link:focus {
   background-color: #ffffff;
@@ -1586,6 +1629,13 @@ address {
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 24px;
+}
+@media screen and (min-width: 768px) {
+  .portfolio__border {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 
 .portfolio__list {
@@ -1627,8 +1677,6 @@ address {
   position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
-  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

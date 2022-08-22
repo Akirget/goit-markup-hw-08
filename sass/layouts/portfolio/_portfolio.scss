@@ -12,10 +12,7 @@
   @extend %list;
   display: flex;
   flex-wrap: wrap;
-
-  @include mq(tab-only) {
-    gap: 30px;
-  }
+  gap: 30px;
 }
 
 .portfolio__works-item {
@@ -54,16 +51,18 @@
 
   @include mq(desk) {
     max-width: 370px;
-    margin-right: 30px;
+
     margin-bottom: 30px;
   }
 }
 
 .portfolio__works-link {
-  display: block;
-
+  display: flex;
+  flex-direction: column;
   transition: background-color var(--anim-slow);
   transition: border var(--anim-slow), box-shadow var(--anim-slow);
+
+  height: 100%;
 
   &:hover,
   &:focus {
@@ -78,6 +77,10 @@
   border: 1px solid #eeeeee;
   border-top: transparent;
   padding: 20px 24px;
+
+  @include mq(tab) {
+    flex-grow: 1;
+  }
 }
 
 .portfolio__list {

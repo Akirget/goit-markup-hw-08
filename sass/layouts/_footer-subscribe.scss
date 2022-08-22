@@ -10,6 +10,8 @@
   }
 
   @include mq(desk) {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
     width: 570px;
     min-height: 86px;
@@ -32,6 +34,10 @@
 .footer__subscribe-form {
   display: flex;
   flex-direction: column;
+
+  @include mq(desk) {
+    flex-direction: row;
+  }
 }
 
 .footer__subscribe-input {
@@ -55,6 +61,12 @@
 
   @include mq(tab) {
     width: 450px;
+  }
+
+  @include mq(desk) {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
   }
 }
 
