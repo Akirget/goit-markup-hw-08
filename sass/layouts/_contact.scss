@@ -82,3 +82,25 @@
     }
   }
 }
+
+.contact__icon--envelope {
+  @include mq(tab-only) {
+    width: 14px;
+    height: 10px;
+  }
+
+  @include mq(desk);
+  width: 16px;
+  height: 12px;
+}
+
+.contact__icon--smartphone {
+  @include mq(tab-only) {
+    width: 10px;
+    height: 14px;
+  }
+
+  @include mq(desk);
+  width: 10px;
+  height: 16px;
+}

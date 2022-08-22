@@ -825,6 +825,26 @@ address {
   }
 }
 
+.contact__icon--envelope {
+  width: 16px;
+  height: 12px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contact__icon--envelope {
+    width: 14px;
+    height: 10px;
+  }
+}
+.contact__icon--smartphone {
+  width: 10px;
+  height: 16px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .contact__icon--smartphone {
+    width: 10px;
+    height: 14px;
+  }
+}
 /* Главный герой */
 .hero {
   padding-top: 200px;
