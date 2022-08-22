@@ -26,6 +26,13 @@
   min-height: 581px;
 
   background-color: var(--white-color);
+
+  @include mq(mob) {
+    width: 450px;
+  }
+  @include mq(desk) {
+    width: 528px;
+  }
 }
 
 .close__button {

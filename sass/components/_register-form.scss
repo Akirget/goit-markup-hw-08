@@ -1,151 +1,148 @@
 /* Форма регистрации */
 
 .register__form {
-    padding: 40px;
+  padding: 40px;
 }
 
 .register__title {
-    display: block;
-    margin-bottom: 12px;
+  display: block;
+  margin-bottom: 12px;
 
-    font-size: 20px;
-    line-height: calc(23 / 20);
-    text-align: center;
+  font-size: 20px;
+  line-height: calc(23 / 20);
+  text-align: center;
 
-    color: var(--title-text-color);
+  color: var(--title-text-color);
 }
 
 .register__group {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .register__wrap {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 
-    &:not(:last-child) {
-        margin-bottom: 10px;
-        }
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 
-
 .register__label {
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
-    color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
+  color: var(--primary-text-color);
 }
 
 .register__field {
-    height: 40px;
-    padding: 12px 42px;
+  height: 40px;
+  padding: 12px 42px;
 
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: transparent;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
 
-    transition: border-color var(--anim-slow);
+  transition: border-color var(--anim-slow);
 
-    &:focus {
-        border-color: var(--accent-color);
-    }
+  &:focus {
+    border-color: var(--accent-color);
+  }
 
-        &:focus+.register__icon {
-        fill: var(--accent-color);
-        }
+  &:focus + .register__icon {
+    fill: var(--accent-color);
+  }
 }
 
-
 .register__icon {
-    position: absolute;
-    bottom: 11px;
-    left: 12px;
-    fill: var(--title-text-color);
+  position: absolute;
+  bottom: 11px;
+  left: 12px;
+  fill: var(--title-text-color);
 }
 
 .register__message {
-    height: 120px;
-    padding: 12px 16px;
+  height: 120px;
+  padding: 12px 16px;
 
-    font-size: 12px;
-    line-height: calc(14 / 12);
-    letter-spacing: 0.01em;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+  letter-spacing: 0.01em;
 
+  color: rgba(117, 117, 117, 0.5);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+  resize: none;
+
+  transition: border-color var(--anim-slow);
+
+  &:focus {
+    border-color: var(--accent-color);
+  }
+
+  &::placeholder {
     color: rgba(117, 117, 117, 0.5);
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-    outline: transparent;
-    resize: none;
-
-    transition: border-color var(--anim-slow);
-
-    &:focus {
-            border-color: var(--accent-color);
-        }
-    
-        &::placeholder {
-            color: rgba(117, 117, 117, 0.5);
-        }
+  }
 }
-
 
 .register__agreement {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-.register__checkbox:focus+.register__agreement-icon {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 1px;
-    border-radius: 2px;
+.register__checkbox:focus + .register__agreement-icon {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 1px;
+  border-radius: 2px;
 }
 
 .register__icon--uncheck {
-    opacity: 1;
-    transition: opacity var(--anim-slow);
+  opacity: 1;
+  transition: opacity var(--anim-slow);
 }
 
-.register__checkbox:checked+.register__agreement-icon>.register__icon--uncheck {
-    opacity: 0;
+.register__checkbox:checked + .register__agreement-icon > .register__icon--uncheck {
+  opacity: 0;
 }
 
 .register__icon--check {
-    opacity: 0;
-    fill: var(--accent-color);
+  opacity: 0;
+  fill: var(--accent-color);
 
-    transition: opacity var(--anim-slow);
+  transition: opacity var(--anim-slow);
 }
 
-.register__checkbox:checked+.register__agreement-icon>.register__icon--check {
-    opacity: 1;
+.register__checkbox:checked + .register__agreement-icon > .register__icon--check {
+  opacity: 1;
 }
 
 .register__agreement-text {
-    font-size: 12px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
+  font-size: 12px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
 
-    user-select: none;
+  user-select: none;
 }
 
 .register__agreement-link {
-    color: var(--accent-color);
-    text-underline-position: under;
-    text-decoration: underline;
+  color: var(--accent-color);
+  text-underline-position: under;
+  text-decoration: underline;
 }
 
 .register__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
