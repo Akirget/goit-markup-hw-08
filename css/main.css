@@ -1560,6 +1560,12 @@ address {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
+  margin-top: 30px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .portfolio__works {
+    gap: 30px;
+  }
 }
 
 .portfolio__works-item {
@@ -1584,6 +1590,7 @@ address {
 .portfolio__works-item:hover .works__overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+  opacity: 1;
 }
 @media screen and (max-width: 767.98px) {
   .portfolio__works-item {
@@ -1616,7 +1623,6 @@ address {
   transition: border var(--anim-slow), -webkit-box-shadow var(--anim-slow);
   transition: border var(--anim-slow), box-shadow var(--anim-slow);
   transition: border var(--anim-slow), box-shadow var(--anim-slow), -webkit-box-shadow var(--anim-slow);
-  height: 100%;
 }
 .portfolio__works-link:hover, .portfolio__works-link:focus {
   background-color: #ffffff;
@@ -1660,6 +1666,9 @@ address {
 
 .works__overlay {
   position: absolute;
+  content: "";
+  opacity: 0;
+  padding: 77px 24px;
   top: 0;
   left: 0;
   width: 100%;
@@ -1674,20 +1683,7 @@ address {
 }
 
 .works__overlay-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 24px;
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.5555555556;
   color: var(--white-color);

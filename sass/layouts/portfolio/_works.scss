@@ -7,6 +7,9 @@
 
 .works__overlay {
   position: absolute;
+  content: '';
+  opacity: 0;
+  padding: 77px 24px;
 
   top: 0;
   left: 0;
@@ -21,16 +24,7 @@
 }
 
 .works__overlay-text {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 0 24px;
-
+  font-weight: 400;
   font-size: 18px;
   line-height: calc(28 / 18);
 
