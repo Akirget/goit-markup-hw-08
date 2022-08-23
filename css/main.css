@@ -615,11 +615,13 @@ address {
 }
 
 .mobile-contack__link--current {
-  font-weight: 500;
-  font-size: 34px;
   line-height: 1.1764705882;
-  letter-spacing: 0.02em;
   color: var(--accent-color);
+}
+@media screen and (min-width: 480px) {
+  .mobile-contack__link--current {
+    font-size: 34px;
+  }
 }
 
 .mobile-media__list {
